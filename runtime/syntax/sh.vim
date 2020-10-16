@@ -424,7 +424,7 @@ endif
 " Identifiers: {{{1
 "=============
 syn match  shSetOption	"\s\zs[-+][a-zA-Z0-9]\+\>"	contained
-syn match  shVariable	"\<\([bwglsav]:\)\=[a-zA-Z0-9.!@_%+,]*\ze="	nextgroup=shVarAssign
+syn match  shVariable	"\<[a-zA-Z_][a-zA-Z0-9_]*\ze="	nextgroup=shVarAssign
 syn match  shVarAssign	"="		contained	nextgroup=shCmdParenRegion,shPattern,shDeref,shDerefSimple,shDoubleQuote,shExDoubleQuote,shSingleQuote,shExSingleQuote,shVar
 syn match  shVar	contained	"\h\w*"
 syn region shAtExpr	contained	start="@(" end=")" contains=@shIdList
